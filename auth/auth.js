@@ -115,10 +115,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // 3. Đăng nhập thành công
             localStorage.setItem('isLoggedIn', 'true');
-            localStorage.setItem('userName', email.split('@')[0]);
+            localStorage.setItem('userName', email.trim().toLowerCase().split('@')[0]);
 
             alert('✅ Đăng nhập thành công!');
-            window.location.href = "/BaoCaoCuoiKy/index.html";
+            window.location.href = "../index.html";
         });
     }
 
