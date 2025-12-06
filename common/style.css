@@ -1,0 +1,78 @@
+/* style.css - CSS CHUNG */
+
+body {
+    background-color: #f8f9fa;
+    padding-top: 56px; /* Bù cho navbar fixed-top */
+}
+
+/* --- TRANG CHỦ (INDEX.HTML) --- */
+.banner {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url("https://images.unsplash.com/photo-1540189549336-e6e99c3679fe") center/cover no-repeat;
+    color: white;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.banner h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.product-card .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* --- TRANG GIỚI THIỆU (ABOUT.HTML) --- */
+.hero {
+    background-image: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.3)), 
+                      url("https://images.unsplash.com/photo-1546549032-9571cd6b27df");
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.icon-box {
+    text-align: center;
+    padding: 20px;
+}
+
+.icon-box i {
+    font-size: 40px;
+    color: #0d6efd;
+    margin-bottom: 15px;
+}
+
+/* --- CHUNG (ALL PAGES) --- */
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.section-title::after {
+    content: "";
+    width: 70px;
+    height: 4px;
+    background: #0d6efd;
+    display: block;
+    margin: 10px auto;
+}
+
+footer {
+    background-color: #212529;
+    color: white;
+    padding: 25px 0;
+}

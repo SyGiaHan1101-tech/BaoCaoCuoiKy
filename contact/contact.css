@@ -1,0 +1,145 @@
+/* --- general.css --- */
+/* Đảm bảo nội dung không bị che bởi navbar cố định */
+body {
+    padding-top: 70px; /* Điều chỉnh tùy theo chiều cao navbar của bạn */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Định dạng page-header */
+.page-header {
+    background-image: url('https://amthucvn.com/wp-content/uploads/2024/10/website-am-thuc-viet-nam-ve-chung-toi.webp'); /* Thay đổi bằng ảnh nền món ăn */
+    background-size: cover;
+    background-position: center;
+    color: #fff; /* Màu chữ trắng */
+    padding: 80px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Tạo bóng chữ dễ đọc */
+    position: relative;
+    overflow: hidden; /* Đảm bảo hiệu ứng overlay không tràn */
+}
+
+.page-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Lớp phủ đen trong suốt */
+    z-index: 1;
+}
+
+.page-header .container {
+    position: relative;
+    z-index: 2; /* Đảm bảo nội dung nằm trên lớp phủ */
+}
+
+.page-header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.page-header p {
+    font-size: 1.3rem;
+    opacity: 0.9;
+}
+
+
+/* Định dạng section chính */
+section {
+    background-color: #fcfcfc; /* Nền nhẹ cho phần nội dung chính */
+}
+
+/* Định dạng các hộp liên hệ */
+.contact-box {
+    background-color: #ffffff;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); /* Bóng đổ mềm mại */
+    border-left: 5px solid #ffc107; /* Đường viền màu vàng nổi bật */
+    transition: transform 0.3s ease-in-out;
+}
+
+.contact-box:hover {
+    transform: translateY(-5px); /* Hiệu ứng nhấc nhẹ khi hover */
+}
+
+.contact-box h4 {
+    color: #28a745; /* Màu xanh lá cây cho tiêu đề */
+    margin-bottom: 25px;
+    font-weight: 600;
+    font-size: 1.8rem;
+}
+
+/* Định dạng input và textarea */
+.contact-box .form-control {
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    padding: 12px 15px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.contact-box .form-control:focus {
+    border-color: #28a745; /* Đổi màu viền khi focus */
+    box-shadow: 0 0 0 0.25rem rgba(40, 167, 69, 0.25);
+}
+
+/* Định dạng nút gửi */
+.contact-box .btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-box .btn-success:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+
+/* Thông tin liên hệ */
+.contact-box p {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+    display: flex; /* Dùng flex để căn chỉnh icon */
+    align-items: center;
+}
+
+.contact-box p i {
+    color: #28a745; /* Màu icon */
+    font-size: 1.2rem;
+    margin-right: 12px;
+    width: 25px; /* Đảm bảo icon có cùng chiều rộng */
+    text-align: center;
+}
+
+/* Định dạng iframe Google Map */
+iframe {
+    width: 100%;
+    height: 350px; /* Chiều cao cố định cho map */
+    border: 0;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    filter: grayscale(80%); /* Làm mờ màu sắc của map */
+    transition: filter 0.3s ease-in-out;
+}
+
+iframe:hover {
+    filter: grayscale(0%); /* Map hiện màu khi hover */
+}
+
+
+/* Footer */
+footer {
+    background-color: #343a40; /* Nền tối giống navbar */
+    color: #f8f9fa;
+    padding: 25px 0;
+    font-size: 0.95rem;
+    margin-top: 50px;
+}

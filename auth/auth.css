@@ -1,0 +1,54 @@
+body { 
+    background-image: url('https://statics.vinpearl.com/mon-an-dac-san-da-nang_1749701902.jpg'); 
+    
+    /* Đảm bảo hình ảnh phủ kín toàn bộ màn hình */
+    background-size: cover; 
+    
+    /* Cố định hình ảnh, nó sẽ không cuộn cùng với nội dung */
+    background-attachment: fixed; 
+    
+    /* Căn giữa hình ảnh */
+    background-position: center; 
+    
+    /* Ngăn hình ảnh lặp lại */
+    background-repeat: no-repeat;
+    
+    /* Thiết lập chiều cao tối thiểu để background phủ kín */
+    min-height: 100vh;
+    
+    /* Đẩy nội dung xuống dưới navbar */
+    padding-top: 80px; 
+}
+
+/* Định dạng container chứa form */
+.auth-container {
+    max-width: 450px; /* Giới hạn chiều rộng của form */
+    margin: 40px auto; /* Căn giữa form */
+    padding: 30px;
+    
+    /* 2. Điều chỉnh màu nền form để dễ đọc trên hình nền */
+    /* Sử dụng nền trắng hơi trong suốt (0.95) để nhìn thấy background một chút */
+    background-color: rgba(255, 255, 255, 0.95); 
+    
+    border-radius: 8px; /* Bo tròn góc */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Tạo bóng đổ rõ hơn */
+}
+
+/* Định dạng cho liên kết chuyển đổi form */
+.form-switch-link {
+    color: #007bff; /* Màu xanh nổi bật */
+    cursor: pointer; /* Con trỏ hình bàn tay */
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+.form-switch-link:hover {
+    color: #0056b3; /* Màu đậm hơn khi di chuột */
+    text-decoration: underline;
+}
+
+/* Các tiêu đề form */
+.auth-container h2 {
+    color: #333;
+    font-weight: 600;
+}

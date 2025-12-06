@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập / Đăng ký - Đặc sản vùng miền</title>
+    
+    <link rel="stylesheet" href="/common/bootstrap.min.css" >
+    <link rel="stylesheet" href="/auth/auth.css">
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="/">Đặc sản vùng miền</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="nav">
+                <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" aria-current="page" href="/">Trang chủ</a></li>
+                <li class="nav-item"><a class="nav-link" href="/about/">Giới thiệu</a></li>
+                <li class="nav-item"><a class="nav-link" href="/product/">Sản phẩm</a></li>
+                <li class="nav-item"><a class="nav-link" href="/contact/">Liên hệ</a></li>
+                <li class="nav-item" id="auth-link-container"><a class="nav-link active" href="/auth/" id="auth-link">Đăng ký/Đăng nhập</a></li>
+            </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 auth-container">
+                
+                <div id="loginForm">
+                    <h2 class="text-center mb-4">Đăng Nhập</h2>
+                    <form id="login-form">
+                        <div class="mb-3">
+                            <label for="loginEmail" class="form-label">Địa chỉ Email</label>
+                            <input type="email" class="form-control" id="loginEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="loginPassword" class="form-label">Mật khẩu</label>
+                            <input type="password" class="form-control" id="loginPassword" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Đăng Nhập</button>
+                    </form>
+                    <p class="text-center mt-3">
+                        Chưa có tài khoản? <a id="switchToRegister" class="form-switch-link">Đăng ký ngay</a>
+                    </p>
+                </div>
+
+                <div id="registerForm" class="d-none">
+                    <h2 class="text-center mb-4">Đăng Ký</h2>
+                    <form id="register-form">
+                        <div class="mb-3">
+                            <label for="registerUsername" class="form-label">Tên người dùng</label>
+                            <input type="text" class="form-control" id="registerUsername" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="registerEmail" class="form-label">Địa chỉ Email</label>
+                            <input type="email" class="form-control" id="registerEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="registerPassword" class="form-label">Mật khẩu</label>
+                            <input type="password" class="form-control" id="registerPassword" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="confirmPassword" class="form-label">Xác nhận Mật khẩu</label>
+                            <input type="password" class="form-control" id="confirmPassword" required>
+                        </div>
+                        <button type="submit" class="btn btn-success w-100">Đăng Ký</button>
+                    </form>
+                    <p class="text-center mt-3">
+                        Đã có tài khoản? <a id="switchToLogin" class="form-switch-link">Đăng nhập</a>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="/common/bootstrap.bundle.min.js"></script>
+    <script src="/auth/auth.js"></script>
+</body>
+</html>
