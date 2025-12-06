@@ -118,7 +118,8 @@ document.addEventListener('DOMContentLoaded', function () {
             localStorage.setItem('userName', email.trim().toLowerCase().split('@')[0]);
 
             alert('✅ Đăng nhập thành công!');
-            window.location.href = "../index.html";
+            window.location.href = "/BaoCaoCuoiKy/index.html";
+
 
         });
     }
