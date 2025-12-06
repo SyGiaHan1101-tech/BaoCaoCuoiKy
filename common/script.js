@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Thay đổi liên kết hiện tại thành Trang cá nhân/Profile
         authLink.textContent = `Xin chào, ${userName}`;
-        authLink.href = "../auth/index.html"; // Tạo trang profile.html nếu cần
+        authLink.href = "/BaoCaoCuoiKy/auth/index.html"; // Tạo trang profile.html nếu cần
         authLink.classList.remove('active');
 
         // Tạo nút Đăng xuất
@@ -38,6 +38,6 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
         // Nếu chưa đăng nhập: Giữ nguyên "Đăng ký/Đăng nhập" (hoặc thiết lập lại)
         authLink.textContent = 'Đăng ký/Đăng nhập';
-        authLink.href = "../auth/index.html";
+        authLink.href = "/BaoCaoCuoiKy/auth/index.html";
     }
 });
