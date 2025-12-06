@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function () {
             localStorage.setItem('userName', email.split('@')[0]);
 
             alert('✅ Đăng nhập thành công!');
-            window.location.href = '/';
+            window.location.href = '/BaoCaoCuoiKy/index.html';
         });
     }
 
