@@ -1,5 +1,17 @@
 document.addEventListener('DOMContentLoaded', function () {
 
+    // ======== Cập nhật chữ "Xin chào" nếu đã đăng nhập ========
+    const authLink = document.getElementById('auth-link');
+    const isLoggedIn = localStorage.getItem('isLoggedIn');
+    const userName = localStorage.getItem('userName');
+
+    if (isLoggedIn && authLink) {
+        authLink.textContent = `Xin chào, ${userName}`;
+        authLink.removeAttribute('href');
+        authLink.style.cursor = 'default';
+    }
+
+    // ======== Xử lý form đăng nhập/đăng ký ========
     const loginForm = document.getElementById('loginForm');
     const registerForm = document.getElementById('registerForm');
     const switchToRegister = document.getElementById('switchToRegister');
@@ -118,6 +130,18 @@ document.addEventListener('DOMContentLoaded', function () {
             localStorage.setItem('userName', email.trim().toLowerCase().split('@')[0]);
 
             alert('✅ Đăng nhập thành công!');
+            
+            const authLink = document.getElementById('auth-link');
+
+            if (authLink) {
+                authLink.textContent = `Xin chào, ${email.split('@')[0]}`; // đổi chữ
+                authLink.removeAttribute('href');  // xóa link, không bấm được
+                authLink.style.cursor = 'default'; // con trỏ chuột bình thường
+            }
+            
+            // lưu trạng thái đăng nhập để giữ chữ Xin chào khi reload trang
+            localStorage.setItem('isLoggedIn', 'true');
+            localStorage.setItem('userName', email.split('@')[0]);
             window.location.href = "/BaoCaoCuoiKy/index.html";
 
 
