@@ -118,6 +118,14 @@ document.addEventListener('DOMContentLoaded', function () {
             localStorage.setItem('userName', email.trim().toLowerCase().split('@')[0]);
 
             alert('✅ Đăng nhập thành công!');
+            const authLink = document.getElementById('auth-link');
+            if (authLink) {
+                authLink.textContent = `Xin chào, ${email.split('@')[0]}`; 
+                authLink.removeAttribute('href');  
+                authLink.style.cursor = 'default'; 
+            }
+            localStorage.setItem('isLoggedIn', 'true');
+            localStorage.setItem('userName', email.split('@')[0]);
             window.location.href = "/BaoCaoCuoiKy/index.html";
 
 
